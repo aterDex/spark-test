@@ -32,7 +32,7 @@ public class App {
                 .map(Tuple2::_2)
                 .aggregate(new AvgCount(0, 0),
                         (ac, v) -> ac.plusTotal(v).plusCount(1),
-                        (x, y) -> x.union(y));
+                        AvgCount::union);
     }
 
     private static JavaSparkContext initSpark() {
