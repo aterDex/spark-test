@@ -22,9 +22,11 @@ public class App {
     }
 
     private static void printLog(Map<String, Integer> calc) {
+        log.info("===================================================");
         for (Map.Entry<String, Integer> stringIntegerEntry : calc.entrySet()) {
             log.info("{} {}", stringIntegerEntry.getKey(), stringIntegerEntry.getValue());
         }
+        log.info("===================================================");
     }
 
     private static Map<String, Integer> calc(JavaSparkContext sc) {
