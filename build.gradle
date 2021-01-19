@@ -27,6 +27,8 @@ allprojects {
             imports {
                 mavenBom('org.springframework.boot:spring-boot-dependencies:2.4.0')
             }
+
+            dependency("org.apache.spark:spark-core_2.12:${Versions.spark}")
         }
     }
 }

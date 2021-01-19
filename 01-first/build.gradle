@@ -8,11 +8,15 @@ version '0.1'
 final MAIN_CLASS_NAME = 'org.next.test.spark.first.App'
 
 dependencies {
-    implementation group: 'org.apache.spark', name: 'spark-core_2.12', version: '2.4.7'
+    implementation 'org.apache.spark:spark-core_2.12'
 }
 
 application {
     mainClassName MAIN_CLASS_NAME
+}
+
+run {
+    workingDir project(':').projectDir
 }
 
 test {
