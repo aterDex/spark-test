@@ -1,0 +1,3 @@
+org/next/test/spark/first/App.java
+ org.next.test.spark.first.App
+ org.next.test.spark.first.App$1

@@ -1,0 +1,19 @@
+plugins {
+    id 'application'
+}
+
+version '0.1'
+
+final MAIN_CLASS_NAME = 'org.sess.telegram.bot.App'
+
+dependencies {
+    implementation group: 'org.apache.spark', name: 'spark-core_2.12', version: '2.4.7'
+}
+
+application {
+    mainClassName MAIN_CLASS_NAME
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,3 @@
+rootProject.name = 'spark-test-0'
+include 'first'
+
