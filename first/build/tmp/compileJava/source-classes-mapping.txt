@@ -1,2 +1,0 @@
-org/next/test/spark/first/App.java
- org.next.test.spark.first.App
