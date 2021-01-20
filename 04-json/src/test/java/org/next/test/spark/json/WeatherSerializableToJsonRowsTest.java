@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.next.test.spark.json.JsonTest.INPUT_FILE;
+import static org.next.test.spark.json.JsonTest.INPUT_FILE_JSON;
 import static org.next.test.spark.utils.SparkUtils.initDefaultSpark;
 import static org.next.test.spark.utils.SparkUtils.printLogWithName;
 
@@ -30,7 +30,7 @@ class WeatherSerializableToJsonRowsTest {
 
     @Test
     void call() {
-        JavaRDD<Weather> weatherRdd = sc.textFile(INPUT_FILE)
+        JavaRDD<Weather> weatherRdd = sc.textFile(INPUT_FILE_JSON)
                 .mapPartitions(new WeatherDeserializableFromJsonRows());
 
         JavaRDD<Weather> weatherRddFiltered = weatherRdd
