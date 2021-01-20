@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+    id 'io.freefair.lombok'
+}
+
+version '0.1'
+
+dependencies {
+    implementation 'org.apache.spark:spark-core_2.12'
+    implementation 'com.fasterxml.jackson.module:jackson-module-parameter-names'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+}
+
+test {
+}

@@ -1,4 +1,6 @@
 rootProject.name = 'spark-test-0'
+include '00-utils'
 include '01-first'
 include '02-transform'
 include '03-aggregate'
+include '04-json'
