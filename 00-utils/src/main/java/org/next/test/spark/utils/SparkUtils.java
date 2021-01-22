@@ -12,11 +12,20 @@ import java.util.function.Function;
 @Slf4j
 public final class SparkUtils {
 
-    private SparkUtils(){}
+    private SparkUtils() {
+    }
 
     public static JavaSparkContext initDefaultSpark() {
         SparkConf conf = new SparkConf()
                 .setMaster("local")
+                .setAppName("Default spark context");
+        JavaSparkContext sc = new JavaSparkContext(conf);
+        return sc;
+    }
+
+    public static JavaSparkContext initDefaultSpark(String master) {
+        SparkConf conf = new SparkConf()
+                .setMaster(master)
                 .setAppName("Default spark context");
         JavaSparkContext sc = new JavaSparkContext(conf);
         return sc;
